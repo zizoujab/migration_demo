@@ -49,6 +49,27 @@ class User
      */
     private $contact;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="phone", type="string", length=255)
+     */
+    private $phone;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="street", type="string", length=255)
+     */
+    private $street;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="zip_code", type="string", length=255)
+     */
+    private $zipCode;
+
 
     /**
      * Get id
@@ -155,5 +176,61 @@ class User
     {
         return $this->contact;
     }
+
+    /**
+     * @return string
+     */
+    public function getPhone()
+    {
+        return $this->phone;
+    }
+
+    /**
+     * @param string $phone
+     * @return User
+     */
+    public function setPhone($phone)
+    {
+        $this->phone = $phone;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStreet()
+    {
+        return $this->street;
+    }
+
+    /**
+     * @param string $street
+     * @return User
+     */
+    public function setStreet($street)
+    {
+        $this->street = $street;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getZipCode()
+    {
+        return $this->zipCode;
+    }
+
+    /**
+     * @param string $zipCode
+     * @return User
+     */
+    public function setZipCode($zipCode)
+    {
+        $this->zipCode = $zipCode;
+        return $this;
+    }
+
+
 }
 
